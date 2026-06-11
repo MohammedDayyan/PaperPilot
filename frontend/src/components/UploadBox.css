@@ -1,0 +1,139 @@
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.upload-box {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  background: var(--bg-surface);
+  position: relative;
+}
+
+.upload-box:hover,
+.upload-box.dragging {
+  border-color: var(--accent);
+  background: rgba(99, 102, 241, 0.05);
+  box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.upload-box.has-file {
+  cursor: default;
+  padding: 20px 24px;
+  border-style: solid;
+  border-color: var(--border);
+}
+
+.upload-input-hidden {
+  display: none;
+}
+
+/* Idle state */
+.upload-idle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.upload-icon-wrap {
+  width: 64px;
+  height: 64px;
+  background: var(--bg-elevated);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-bright);
+  border: 1px solid var(--border);
+  margin-bottom: 4px;
+  transition: var(--transition);
+}
+
+.upload-box:hover .upload-icon-wrap {
+  background: var(--accent-glow);
+  border-color: var(--accent);
+}
+
+.upload-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.upload-hint {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* File selected state */
+.upload-file-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+}
+
+.upload-file-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+}
+
+.upload-file-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.upload-filename {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
+.upload-filesize {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.upload-remove {
+  margin-left: auto;
+  color: var(--text-muted);
+}
+
+/* Progress bar */
+.upload-progress-bar {
+  height: 3px;
+  background: var(--bg-elevated);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.upload-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+/* Submit button */
+.upload-submit {
+  width: 100%;
+}
