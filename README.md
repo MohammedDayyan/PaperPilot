@@ -115,4 +115,8 @@ You can launch both the backend and frontend services using the provided launche
 
 Once running, the application will be accessible at:
 * **Frontend**: `http://localhost:5173`
+<<<<<<< HEAD
 * **Backend Docs (FastAPI)**: `http://localhost:8000/docs`
+=======
+* **Backend Docs (FastAPI)**: `http://localhost:8000/docs`
+>>>>>>> 150c4c5790a44e5190d3d592a3a19f952519b9b3
